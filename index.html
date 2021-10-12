@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORDERING</title>
+    <link rel="stylesheet" href = "style.css">
+    
+</head>
+<body>
+    <div class="topo">
+        <h1>FoodBox</h1>
+        <h2>Monte seu box e receba em 15 minutos!</h2>
+      </div>
+      <h3>Primeiro, seu prato.</h3>
+      <div id = "frango" class= "produto" onclick = "escolherFrango()">
+        <img src="https://amp.receitadevovo.com.br/wp-content/uploads/2020/10/frango-frito-estilo-americano-receita_18052020142306.jpg">
+        <h4> Frango Yin-Yang </h4>
+        <p> <strong>
+          Um pouco de batata, um pouco de salada. 
+        </p>
+        <p>
+          R$ 19,90
+        </p>
+        
+      </div>
+      <div id = "carne" class = "produto" onclick = "escolherCarne()">
+        <img src = "http://static.clubedaanamariabraga.com.br/wp-content/uploads/2019/10/salada-de-carne-desfiada.jpg">
+        <h4> Carne e Salada. </h4>
+        <p>
+                Partida ao meio pra parecer mais carne.
+        </p>
+        <p> <strong> R$ 24,90 </p>
+      </div>
+      <h3> Agora sua bebida. </h3>
+      <div id = "coca" class = "produto" onclick="escolherCoca()">
+        <img src = "http://1.bp.blogspot.com/-cGtd2mxShX0/T5Bn_WkdlnI/AAAAAAAAABA/bkyEMyWuaRA/s1600/coca-cola.jpg">
+        <h4> Coca-cola gelada </h4>
+        <p>
+          Normal, zero, ou stevia. <br> Vai na sorte.
+        </p>
+        <p> <strong> R$ 5,90 </p>
+      </div>
+      <div id = "refresco" class = "produto" onclick = "escolherRefresco()">
+        <img src = "https://thumbs.dreamstime.com/z/%C3%A1gua-fresca-gelado-no-copo-pl%C3%A1stico-39508225.jpg">
+        <h4> Refresco </h4>
+        <p>
+          Podia ser suco, mas leva agua.
+        </p>
+        <p> <strong> R$ 3,90 </p>
+      </div>
+  <h3> Por fim, sua sobremesa </h3>
+  <div id = "pudim" class = "produto" onclick="escolherPudim()">
+     <img src = "https://i.ytimg.com/vi/rQq-U7vC-rg/maxresdefault.jpg">   
+    <h4> Pudim </h4>
+    <p>
+      Apenas um lindo e brilhante pudim.
+    </p>
+    <p> <strong> R$ 7,90 </p>
+  </div>
+  <div id = "sorvete" class = "produto" onclick="escolherSorvete()">
+     <img src="https://st.depositphotos.com/1010050/1385/i/600/depositphotos_13857133-stock-photo-ice-cream-dessert.jpg">   
+    <h4> Sorvete bem gelada. </h4>
+    <p>
+      Tres bolinhas como na foto.
+    </p>
+    <p> <strong> R$ 6,90 </p>
+  </div>
+  <br> <br>
+  <button class = "butão" onclick="finalizarPedido()"> finalizar pedido </button>
+    </body> 
+
+  
+  <script>
+    let prato;
+    function escolherFrango() {
+      document.getElementById("frango").style.borderColor = "green";
+      document.getElementById("carne").style.borderColor = "white";
+      prato = "frango";
+    }
+    function escolherCarne() {
+      document.getElementById("carne").style.borderColor = "green";
+      document.getElementById("frango").style.borderColor = "white";
+      prato = "carne";
+    }
+    let bebida;
+    function escolherCoca() {
+      document.getElementById("coca").style.borderColor = "green";
+      document.getElementById("refresco").style.borderColor = "white";
+      bebida = "coca";
+    }
+    function escolherRefresco() {
+    document.getElementById("refresco").style.borderColor = "green";
+    document.getElementById("coca").style.borderColor = "white";
+    bebida = "refresco";
+    }
+    let sobremesa;
+    function escolherPudim() {
+      document.getElementById("pudim").style.borderColor = "green";
+      document.getElementById("sorvete").style.borderColor = "white";
+      sobremesa = "pudim";
+    }
+    function escolherSorvete() {
+      document.getElementById("sorvete").style.borderColor = "green";
+      document.getElementById("pudim").style.borderColor = "white";
+      sobremesa = "sorvete";
+    }
+    let mensagem;
+    function finalizarPedido() {
+      mensagem = "Ola, gostaria de pedir um combo: " + prato + "," + bebida + "," + sobremesa +".";
+      window.open("https://wa.me/+5561994073653?text=" + mensagem);
+  
+    }
+    
+    </script>
+     
+</body>
+</html>
+
